@@ -9,8 +9,12 @@
     <PackageReference Include="FileParser" Version="2.2.0" />
     <PackageReference Include="morelinq" Version="3.3.2" />
     <PackageReference Include="SheepTools" Version="0.12.0" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="System.Runtime.CompilerServices.Unsafe" />
+  </ItemGroup>
   <ItemGroup>
     <None Update="Inputs\*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
