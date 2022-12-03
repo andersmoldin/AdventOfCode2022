@@ -15,7 +15,7 @@ public class Day_01 : BaseDay
     {
         var solution = _input.GroupAdjacent(n => n == string.Empty ? "N" : "Y")
             .Where(g => g.Key == "Y")
-            .Max(g => g.Select(int.Parse).Sum())
+            .Max(g => g.Select(Int32.Parse).Sum())
             .ToString();
 
         return new(solution);
@@ -25,9 +25,9 @@ public class Day_01 : BaseDay
     {
         var solution = _input.GroupAdjacent(n => n == string.Empty ? "N" : "Y")
             .Where(g => g.Key == "Y")
-            .OrderByDescending(g => g.Select(int.Parse).Sum())
+            .OrderByDescending(g => g.Select(Int32.Parse).Sum())
             .Take(3)
-            .Sum(c => c.Select(int.Parse).Sum())
+            .Sum(c => c.Select(Int32.Parse).Sum())
             .ToString();
 
         return new(solution);
